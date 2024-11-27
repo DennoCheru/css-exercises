@@ -28,16 +28,33 @@
   grid-area: header;
   display: grid;
   grid-template-columns: 1 fr 4fr;
+  grid-template-areas: "logo menu";
+  align-items: center;
 }
 
-.menu ul {
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menu ul{
+  grid-area: menu;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.menu li {
+text-align: center;
+padding: 10px;
+cursor: pointer;
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style-type: none; ;
 }
 
 .sidebar {
@@ -69,6 +86,7 @@
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+  list-style-type: none;
 }
 
 .article {
